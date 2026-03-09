@@ -1,0 +1,8 @@
+2026-02-25 15:38:30 | INFO     | src.data.preprocessing | 템플릿 생성 완료:
+2026-02-25 15:38:30 | INFO     | src.data.preprocessing |   환자 정보: /Users/hwangsang-ik/Desktop/ccrt_hematologic_toxicity/data/raw/template_patients.csv
+2026-02-25 15:38:30 | INFO     | src.data.preprocessing |   CBC 검사: /Users/hwangsang-ik/Desktop/ccrt_hematologic_toxicity/data/raw/template_cbc_results.csv
+2026-02-25 15:38:30 | INFO     | src.data.preprocessing |   데이터 사전: /Users/hwangsang-ik/Desktop/ccrt_hematologic_toxicity/data/raw/data_dictionary.csv
+2026-02-25 15:38:30 | INFO     | __main__ | EMR 추출용 템플릿이 data/raw/ 디렉토리에 생성되었습니다
+2026-02-25 15:38:30 | INFO     | __main__ |   - template_patients.csv : 환자 기본정보
+2026-02-25 15:38:30 | INFO     | __main__ |   - template_cbc_results.csv : CBC 검사 결과 (Long 형식)
+2026-02-25 15:38:30 | INFO     | __main__ |   - data_dictionary.csv : 데이터 사전 (변수 설명)

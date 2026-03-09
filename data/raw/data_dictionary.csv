@@ -1,0 +1,25 @@
+﻿파일,변수명,설명,타입,예시,필수
+patients,patient_id,환자 고유 번호,문자열,PT0001,Y
+patients,age,진단 시 나이,정수,65,Y
+patients,sex,성별,M/F,M,Y
+patients,bmi,체질량지수 (kg/m²),실수,23.5,N
+patients,ecog_ps,ECOG Performance Status,정수 (0-4),1,Y
+patients,stage,AJCC 병기,문자열,IIIA,Y
+patients,t_stage,T 병기,문자열,T2,Y
+patients,n_stage,N 병기,문자열,N2,Y
+patients,creatinine,혈청 크레아티닌 (mg/dL),실수,0.9,N
+patients,albumin,혈청 알부민 (g/dL),실수,3.8,N
+patients,rt_start_date,방사선 치료 시작일,YYYY-MM-DD,2024-01-15,Y
+patients,rt_total_dose,방사선 총 선량 (Gy),실수,60.0,Y
+patients,rt_fraction_dose,분할 선량 (Gy),실수,2.0,N
+patients,chemo_regimen,항암 레지멘,문자열,"EP, TP, GP 등",Y
+patients,chemo_dose,항암 용량 (mg/m²),실수,100,N
+patients,chemo_cycles,항암 주기 수,정수,2,N
+cbc_results,patient_id,환자 고유 번호,문자열,PT0001,Y
+cbc_results,exam_date,CBC 검사 날짜,YYYY-MM-DD,2024-01-12,Y
+cbc_results,WBC,백혈구 수 (10³/μL),실수,7.5,Y
+cbc_results,ANC,절대호중구수 (10³/μL),실수,4.2,Y
+cbc_results,ALC,절대림프구수 (10³/μL),실수,1.8,Y
+cbc_results,AMC,절대단핵구수 (10³/μL),실수,0.5,Y
+cbc_results,PLT,혈소판 수 (10³/μL),실수,250,Y
+cbc_results,Hb,헤모글로빈 (g/dL),실수,13.5,Y

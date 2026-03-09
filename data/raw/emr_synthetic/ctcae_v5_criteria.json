@@ -1,0 +1,42 @@
+{
+  "title": "CTCAE v5.0 Hematologic Toxicity Grading Criteria",
+  "reference": "https://ctep.cancer.gov/protocoldevelopment/electronic_applications/ctc.htm",
+  "note": "Grade 0 = 정상 (LLN 이상), Grade 3+ = 심각한 독성",
+  "criteria": {
+    "neutropenia": {
+      "marker": "ANC (10³/μL)",
+      "grade_1": "1.5 ≤ ANC < 2.0",
+      "grade_2": "1.0 ≤ ANC < 1.5",
+      "grade_3": "0.5 ≤ ANC < 1.0",
+      "grade_4": "ANC < 0.5"
+    },
+    "anemia": {
+      "marker": "Hemoglobin (g/dL)",
+      "grade_1": "10.0 ≤ Hb < 12.0",
+      "grade_2": "8.0 ≤ Hb < 10.0",
+      "grade_3": "6.5 ≤ Hb < 8.0",
+      "grade_4": "Hb < 6.5"
+    },
+    "thrombocytopenia": {
+      "marker": "Platelet (10³/μL)",
+      "grade_1": "75 ≤ PLT < 150",
+      "grade_2": "50 ≤ PLT < 75",
+      "grade_3": "25 ≤ PLT < 50",
+      "grade_4": "PLT < 25"
+    },
+    "leukopenia": {
+      "marker": "WBC (10³/μL)",
+      "grade_1": "3.0 ≤ WBC < 4.0",
+      "grade_2": "2.0 ≤ WBC < 3.0",
+      "grade_3": "1.0 ≤ WBC < 2.0",
+      "grade_4": "WBC < 1.0"
+    },
+    "lymphopenia": {
+      "marker": "ALC (10³/μL)",
+      "grade_1": "0.8 ≤ ALC < 1.0",
+      "grade_2": "0.5 ≤ ALC < 0.8",
+      "grade_3": "0.2 ≤ ALC < 0.5",
+      "grade_4": "ALC < 0.2"
+    }
+  }
+}

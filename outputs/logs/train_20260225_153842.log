@@ -1,0 +1,108 @@
+2026-02-25 15:38:42 | INFO     | __main__ | EMR 모드: 원본 데이터를 전처리 후 학습합니다
+2026-02-25 15:38:42 | INFO     | src.data.preprocessing | ============================================================
+2026-02-25 15:38:42 | INFO     | src.data.preprocessing | EMR 전처리 파이프라인 시작
+2026-02-25 15:38:42 | INFO     | src.data.preprocessing | ============================================================
+2026-02-25 15:38:42 | INFO     | src.data.preprocessing | 1단계: 치료 시작일 매핑
+2026-02-25 15:38:42 | INFO     | src.data.preprocessing | 2단계: 검사 날짜 → Week 변환
+2026-02-25 15:38:42 | INFO     | src.data.preprocessing | Week 할당 완료: Week 0=3건, Week 1=3건, Week 2=3건
+2026-02-25 15:38:42 | INFO     | src.data.preprocessing | 3단계: Long → Wide 형식 변환
+2026-02-25 15:38:42 | INFO     | src.data.preprocessing | Week 0 CBC 결측 환자: 0.0%
+2026-02-25 15:38:42 | INFO     | src.data.preprocessing | Week 1 CBC 결측 환자: 0.0%
+2026-02-25 15:38:42 | INFO     | src.data.preprocessing | Week 2 CBC 결측 환자: 0.0%
+2026-02-25 15:38:42 | INFO     | src.data.preprocessing | Wide 변환 완료: 3명, 18개 컬럼
+2026-02-25 15:38:42 | INFO     | src.data.preprocessing | 4단계: 결측 Week 보간
+2026-02-25 15:38:42 | INFO     | src.data.preprocessing | 보간 완료 (방법: linear), 잔여 결측: 0건
+2026-02-25 15:38:42 | INFO     | src.data.preprocessing | 5단계: CTCAE Grade 계산
+2026-02-25 15:38:42 | INFO     | src.data.preprocessing | [neutropenia] Grade 분포: {0: 3}, Grade 3+ 발생률: 0.0%
+2026-02-25 15:38:42 | INFO     | src.data.preprocessing | [anemia] Grade 분포: {0: 1, 1: 2}, Grade 3+ 발생률: 0.0%
+2026-02-25 15:38:42 | INFO     | src.data.preprocessing | [thrombocytopenia] Grade 분포: {0: 3}, Grade 3+ 발생률: 0.0%
+2026-02-25 15:38:42 | INFO     | src.data.preprocessing | [leukopenia] Grade 분포: {0: 2, 1: 1}, Grade 3+ 발생률: 0.0%
+2026-02-25 15:38:42 | INFO     | src.data.preprocessing | [lymphopenia] Grade 분포: {0: 1, 1: 1, 2: 1}, Grade 3+ 발생률: 0.0%
+2026-02-25 15:38:42 | INFO     | src.data.preprocessing | 6단계: 환자 정보 병합
+2026-02-25 15:38:42 | INFO     | src.data.preprocessing | 전처리 완료: 3명, 58개 변수
+2026-02-25 15:38:42 | INFO     | src.data.preprocessing | ============================================================
+2026-02-25 15:38:42 | INFO     | __main__ | 전처리 데이터 저장: /Users/hwangsang-ik/Desktop/ccrt_hematologic_toxicity/data/processed/processed_data.csv
+2026-02-25 15:38:42 | INFO     | src.utils.helpers | 시드 고정: 42
+2026-02-25 15:38:42 | INFO     | __main__ | ============================================================
+2026-02-25 15:38:42 | INFO     | __main__ | 1단계: 데이터 로드
+2026-02-25 15:38:42 | INFO     | __main__ | ============================================================
+2026-02-25 15:38:42 | INFO     | src.data.data_loader | 데이터 로드 완료: /Users/hwangsang-ik/Desktop/ccrt_hematologic_toxicity/data/processed/processed_data.csv (3행 x 58열)
+2026-02-25 15:38:42 | INFO     | src.utils.helpers | ============================================================
+2026-02-25 15:38:42 | INFO     | src.utils.helpers | 데이터셋 요약
+2026-02-25 15:38:42 | INFO     | src.utils.helpers | ============================================================
+2026-02-25 15:38:42 | INFO     | src.utils.helpers | 총 환자 수: 3
+2026-02-25 15:38:42 | INFO     | src.utils.helpers | 변수 수: 58
+2026-02-25 15:38:42 | INFO     | src.utils.helpers | 결측치: 0
+2026-02-25 15:38:42 | INFO     | src.utils.helpers | 양성 (Grade 3+): 0 (0.0%)
+2026-02-25 15:38:42 | INFO     | src.utils.helpers | 음성 (Grade <3): 3 (100.0%)
+2026-02-25 15:38:42 | INFO     | src.utils.helpers | ============================================================
+2026-02-25 15:38:42 | INFO     | __main__ | ============================================================
+2026-02-25 15:38:42 | INFO     | __main__ | 2단계: 결측치 처리
+2026-02-25 15:38:42 | INFO     | __main__ | ============================================================
+2026-02-25 15:38:42 | INFO     | src.data.data_loader | 결측치가 없습니다.
+2026-02-25 15:38:42 | INFO     | src.data.data_loader | 결측치 처리 완료 (전략: median)
+2026-02-25 15:38:42 | INFO     | __main__ | ============================================================
+2026-02-25 15:38:42 | INFO     | __main__ | 3단계: 데이터 분할 (학습/검증/테스트)
+2026-02-25 15:38:42 | INFO     | __main__ | ============================================================
+2026-02-25 15:38:42 | INFO     | src.data.data_loader | 데이터 분할 완료: 학습=1, 검증=1, 테스트=1
+2026-02-25 15:38:42 | INFO     | src.data.data_loader |   학습 양성 비율: 0.000
+2026-02-25 15:38:42 | INFO     | src.data.data_loader |   검증 양성 비율: 0.000
+2026-02-25 15:38:42 | INFO     | src.data.data_loader |   테스트 양성 비율: 0.000
+2026-02-25 15:38:42 | INFO     | __main__ | ============================================================
+2026-02-25 15:38:42 | INFO     | __main__ | 4단계: 특성 공학 (CBC 시계열 파생 변수 생성)
+2026-02-25 15:38:42 | INFO     | __main__ | ============================================================
+2026-02-25 15:38:42 | INFO     | src.data.feature_engineer | 시계열 파생 변수 52개 생성 완료
+2026-02-25 15:38:42 | INFO     | src.data.feature_engineer | 시계열 파생 변수 52개 생성 완료
+2026-02-25 15:38:42 | INFO     | src.data.feature_engineer | 시계열 파생 변수 52개 생성 완료
+2026-02-25 15:38:42 | INFO     | src.data.feature_engineer | 범주형 인코딩 완료: 6개 변수 (onehot)
+2026-02-25 15:38:42 | INFO     | src.data.feature_engineer | 범주형 인코딩 완료: 6개 변수 (onehot)
+2026-02-25 15:38:42 | INFO     | src.data.feature_engineer | 범주형 인코딩 완료: 6개 변수 (onehot)
+2026-02-25 15:38:42 | INFO     | __main__ | ============================================================
+2026-02-25 15:38:42 | INFO     | __main__ | 5단계: CBC 시계열 탐색적 분석
+2026-02-25 15:38:42 | INFO     | __main__ | ============================================================
+2026-02-25 15:38:42 | INFO     | src.evaluation.visualization | CBC 시계열 그래프 저장: /Users/hwangsang-ik/Desktop/ccrt_hematologic_toxicity/outputs/figures/cbc_timeseries_AMC.png
+2026-02-25 15:38:42 | INFO     | src.evaluation.visualization | CBC 시계열 그래프 저장: /Users/hwangsang-ik/Desktop/ccrt_hematologic_toxicity/outputs/figures/cbc_timeseries_ANC.png
+2026-02-25 15:38:42 | INFO     | src.evaluation.visualization | CBC 시계열 그래프 저장: /Users/hwangsang-ik/Desktop/ccrt_hematologic_toxicity/outputs/figures/cbc_timeseries_WBC.png
+2026-02-25 15:38:42 | INFO     | __main__ | ============================================================
+2026-02-25 15:38:42 | INFO     | __main__ | 6단계: 모델 학습 [baseline_only]
+2026-02-25 15:38:42 | INFO     | __main__ | ============================================================
+2026-02-25 15:38:42 | INFO     | src.data.feature_engineer | 특성 선택 (baseline_only): baseline=8, cbc_raw=18, cbc_derived=52, 전체=8
+2026-02-25 15:38:42 | INFO     | __main__ | 
+--- xgboost (baseline_only) ---
+2026-02-25 15:38:42 | ERROR    | __main__ | xgboost 학습 실패: No module named 'xgboost'
+2026-02-25 15:38:42 | INFO     | __main__ | 
+--- lightgbm (baseline_only) ---
+2026-02-25 15:38:42 | ERROR    | __main__ | lightgbm 학습 실패: No module named 'lightgbm'
+2026-02-25 15:38:42 | INFO     | __main__ | 
+--- logistic_regression (baseline_only) ---
+2026-02-25 15:38:42 | ERROR    | __main__ | logistic_regression 학습 실패: This solver needs samples of at least 2 classes in the data, but the data contains only one class: 0
+2026-02-25 15:38:42 | INFO     | __main__ | ============================================================
+2026-02-25 15:38:42 | INFO     | __main__ | 6단계: 모델 학습 [baseline_cbc]
+2026-02-25 15:38:42 | INFO     | __main__ | ============================================================
+2026-02-25 15:38:42 | INFO     | src.data.feature_engineer | 특성 선택 (baseline_cbc): baseline=8, cbc_raw=18, cbc_derived=52, 전체=78
+2026-02-25 15:38:42 | INFO     | __main__ | 
+--- xgboost (baseline_cbc) ---
+2026-02-25 15:38:42 | ERROR    | __main__ | xgboost 학습 실패: No module named 'xgboost'
+2026-02-25 15:38:42 | INFO     | __main__ | 
+--- lightgbm (baseline_cbc) ---
+2026-02-25 15:38:42 | ERROR    | __main__ | lightgbm 학습 실패: No module named 'lightgbm'
+2026-02-25 15:38:42 | INFO     | __main__ | 
+--- logistic_regression (baseline_cbc) ---
+2026-02-25 15:38:42 | ERROR    | __main__ | logistic_regression 학습 실패: This solver needs samples of at least 2 classes in the data, but the data contains only one class: 0
+2026-02-25 15:38:42 | INFO     | __main__ | 
+--- LSTM (baseline_cbc) ---
+2026-02-25 15:38:42 | INFO     | src.data.feature_engineer | LSTM 시퀀스 생성: shape=(1, 3, 6) (환자=1, 시점=3, 변수=6)
+2026-02-25 15:38:42 | INFO     | src.data.feature_engineer | LSTM 시퀀스 생성: shape=(1, 3, 6) (환자=1, 시점=3, 변수=6)
+2026-02-25 15:38:42 | INFO     | src.data.feature_engineer | LSTM 시퀀스 생성: shape=(1, 3, 6) (환자=1, 시점=3, 변수=6)
+2026-02-25 15:38:42 | INFO     | src.data.dataset | DataLoader 생성 완료: batch_size=32, train=1, val=1, test=1
+2026-02-25 15:38:42 | INFO     | src.models.trainer | 학습 장치: mps
+2026-02-25 15:38:42 | INFO     | src.models.trainer | 학습 시작: 100 에폭, 장치=mps
+2026-02-25 15:38:43 | ERROR    | __main__ | LSTM 학습 실패: Expected more than 1 value per channel when training, got input size torch.Size([1, 32])
+2026-02-25 15:38:43 | INFO     | __main__ | ============================================================
+2026-02-25 15:38:43 | INFO     | __main__ | 7단계: 모델 비교 및 결과 저장
+2026-02-25 15:38:43 | INFO     | __main__ | ============================================================
+2026-02-25 15:38:43 | INFO     | __main__ | ============================================================
+2026-02-25 15:38:43 | INFO     | __main__ | 파이프라인 완료!
+2026-02-25 15:38:43 | INFO     | __main__ | 결과 저장 위치: /Users/hwangsang-ik/Desktop/ccrt_hematologic_toxicity/outputs/logs
+2026-02-25 15:38:43 | INFO     | __main__ | 시각화 저장 위치: /Users/hwangsang-ik/Desktop/ccrt_hematologic_toxicity/outputs/figures
+2026-02-25 15:38:43 | INFO     | __main__ | ============================================================

@@ -1,0 +1,263 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1772775344595,
+  "projectRoot": "/Users/hwangsang-ik/Desktop/ccrt_hematologic_toxicity",
+  "techStack": {
+    "languages": [
+      {
+        "name": "Python",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "requirements.txt"
+        ]
+      }
+    ],
+    "frameworks": [],
+    "packageManager": "pip",
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": null,
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": null,
+    "scripts": {}
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "src"
+    ],
+    "gitBranches": null
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "__pycache__": {
+      "path": "__pycache__",
+      "purpose": null,
+      "fileCount": 3,
+      "lastAccessed": 1772775344562,
+      "keyFiles": [
+        "config.cpython-312.pyc",
+        "generate_emr_data.cpython-312.pyc",
+        "main.cpython-312.pyc"
+      ]
+    },
+    "data": {
+      "path": "data",
+      "purpose": "Data files",
+      "fileCount": 0,
+      "lastAccessed": 1772775344586,
+      "keyFiles": []
+    },
+    "notebooks": {
+      "path": "notebooks",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1772775344586,
+      "keyFiles": []
+    },
+    "outputs": {
+      "path": "outputs",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1772775344586,
+      "keyFiles": []
+    },
+    "src": {
+      "path": "src",
+      "purpose": "Source code",
+      "fileCount": 1,
+      "lastAccessed": 1772775344587,
+      "keyFiles": [
+        "__init__.py"
+      ]
+    },
+    "outputs/models": {
+      "path": "outputs/models",
+      "purpose": "Data models",
+      "fileCount": 7,
+      "lastAccessed": 1772775344587,
+      "keyFiles": [
+        "lightgbm_baseline_cbc.pkl",
+        "lightgbm_baseline_only.pkl",
+        "logistic_regression_baseline_cbc.pkl"
+      ]
+    },
+    "src/data": {
+      "path": "src/data",
+      "purpose": "Data files",
+      "fileCount": 5,
+      "lastAccessed": 1772775344588,
+      "keyFiles": [
+        "__init__.py",
+        "data_loader.py",
+        "dataset.py"
+      ]
+    },
+    "src/models": {
+      "path": "src/models",
+      "purpose": "Data models",
+      "fileCount": 4,
+      "lastAccessed": 1772775344588,
+      "keyFiles": [
+        "__init__.py",
+        "baseline_models.py",
+        "lstm_model.py"
+      ]
+    },
+    "src/utils": {
+      "path": "src/utils",
+      "purpose": "Utility functions",
+      "fileCount": 2,
+      "lastAccessed": 1772775344595,
+      "keyFiles": [
+        "__init__.py",
+        "helpers.py"
+      ]
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "lstm_forecast.py",
+      "accessCount": 27,
+      "lastAccessed": 1772811076688,
+      "type": "file"
+    },
+    {
+      "path": "lstm_e2e.py",
+      "accessCount": 16,
+      "lastAccessed": 1772785198880,
+      "type": "file"
+    },
+    {
+      "path": "external_validation.py",
+      "accessCount": 14,
+      "lastAccessed": 1772782692148,
+      "type": "file"
+    },
+    {
+      "path": "lstm_twostage.py",
+      "accessCount": 14,
+      "lastAccessed": 1772784144870,
+      "type": "file"
+    },
+    {
+      "path": "config.py",
+      "accessCount": 14,
+      "lastAccessed": 1772785642300,
+      "type": "file"
+    },
+    {
+      "path": "src/models/trainer.py",
+      "accessCount": 12,
+      "lastAccessed": 1772785791585,
+      "type": "file"
+    },
+    {
+      "path": "generate_emr_data.py",
+      "accessCount": 9,
+      "lastAccessed": 1772782328189,
+      "type": "file"
+    },
+    {
+      "path": "src/data/feature_engineer.py",
+      "accessCount": 8,
+      "lastAccessed": 1772785631925,
+      "type": "file"
+    },
+    {
+      "path": "src/models/forecaster.py",
+      "accessCount": 8,
+      "lastAccessed": 1772785693364,
+      "type": "file"
+    },
+    {
+      "path": "main.py",
+      "accessCount": 7,
+      "lastAccessed": 1772781924362,
+      "type": "file"
+    },
+    {
+      "path": "src/data/dataset.py",
+      "accessCount": 6,
+      "lastAccessed": 1772781918496,
+      "type": "file"
+    },
+    {
+      "path": "src/data/preprocessing.py",
+      "accessCount": 5,
+      "lastAccessed": 1772782691327,
+      "type": "file"
+    },
+    {
+      "path": "src/models/lstm_model.py",
+      "accessCount": 5,
+      "lastAccessed": 1772784529676,
+      "type": "file"
+    },
+    {
+      "path": "src/data/data_loader.py",
+      "accessCount": 2,
+      "lastAccessed": 1772782815668,
+      "type": "file"
+    },
+    {
+      "path": "",
+      "accessCount": 1,
+      "lastAccessed": 1772775412568,
+      "type": "directory"
+    },
+    {
+      "path": "data/raw/template_patients.csv",
+      "accessCount": 1,
+      "lastAccessed": 1772775420941,
+      "type": "file"
+    },
+    {
+      "path": "data/raw/template_cbc_results.csv",
+      "accessCount": 1,
+      "lastAccessed": 1772775421506,
+      "type": "file"
+    },
+    {
+      "path": "data/raw/data_dictionary.csv",
+      "accessCount": 1,
+      "lastAccessed": 1772775421833,
+      "type": "file"
+    },
+    {
+      "path": "src/data",
+      "accessCount": 1,
+      "lastAccessed": 1772781928031,
+      "type": "directory"
+    },
+    {
+      "path": "outputs/figures/forecaster_per_feature_mse.png",
+      "accessCount": 1,
+      "lastAccessed": 1772835618190,
+      "type": "file"
+    },
+    {
+      "path": "outputs/figures/model_comparison_bar.png",
+      "accessCount": 1,
+      "lastAccessed": 1772835618195,
+      "type": "file"
+    },
+    {
+      "path": "outputs/figures/forecaster_anc_amc_comparison.png",
+      "accessCount": 1,
+      "lastAccessed": 1772835618366,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}

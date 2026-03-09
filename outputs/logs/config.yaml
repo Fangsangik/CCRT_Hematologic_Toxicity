@@ -1,0 +1,123 @@
+data:
+  baseline_clinical_features:
+  - age
+  - sex
+  - bmi
+  - ecog_ps
+  - stage
+  - t_stage
+  - n_stage
+  - creatinine
+  - albumin
+  categorical_features:
+  - sex
+  - ecog_ps
+  - stage
+  - t_stage
+  - n_stage
+  - chemo_regimen
+  cbc_features:
+  - WBC
+  - ANC
+  - ALC
+  - AMC
+  - PLT
+  - Hb
+  cbc_input_timepoints:
+  - 0
+  - 1
+  - 2
+  cbc_timepoints:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  max_missing_rate: 0.3
+  missing_strategy: median
+  primary_target: grade3_neutropenia
+  random_state: 42
+  stratify: true
+  target_columns:
+  - grade3_neutropenia
+  - grade3_anemia
+  - grade3_thrombocytopenia
+  test_size: 0.2
+  treatment_features:
+  - rt_total_dose
+  - rt_fraction_dose
+  - chemo_regimen
+  - chemo_dose
+  - chemo_cycles
+  val_size: 0.15
+lightgbm:
+  colsample_bytree: 0.8
+  learning_rate: 0.05
+  max_depth: 6
+  min_child_samples: 20
+  n_estimators: 300
+  num_leaves: 31
+  random_state: 42
+  reg_alpha: 0.1
+  reg_lambda: 1.0
+  scale_pos_weight: 1.0
+  subsample: 0.8
+logistic_regression:
+  C: 1.0
+  class_weight: balanced
+  max_iter: 1000
+  penalty: l2
+  random_state: 42
+  solver: lbfgs
+lstm:
+  baseline_input_size: 23
+  batch_size: 32
+  bidirectional: false
+  dropout: 0.3
+  early_stopping_patience: 15
+  fc_hidden_size: 32
+  hidden_size: 64
+  input_size: 7
+  learning_rate: 0.001
+  num_classes: 1
+  num_epochs: 100
+  num_layers: 2
+  seq_length: 8
+  weight_decay: 0.0001
+paths:
+  figure_dir: /Users/hwangsang-ik/Desktop/ccrt_hematologic_toxicity/outputs/figures
+  log_dir: /Users/hwangsang-ik/Desktop/ccrt_hematologic_toxicity/outputs/logs
+  model_dir: /Users/hwangsang-ik/Desktop/ccrt_hematologic_toxicity/outputs/models
+  processed_data_dir: /Users/hwangsang-ik/Desktop/ccrt_hematologic_toxicity/data/processed
+  project_root: /Users/hwangsang-ik/Desktop/ccrt_hematologic_toxicity
+  raw_data_dir: /Users/hwangsang-ik/Desktop/ccrt_hematologic_toxicity/data/raw
+train:
+  device: auto
+  experiment_modes:
+  - baseline_only
+  - baseline_cbc
+  handle_imbalance: smote
+  models_to_train:
+  - lstm
+  - xgboost
+  - lightgbm
+  - logistic_regression
+  n_folds: 5
+  seed: 42
+  use_stratified_kfold: true
+xgboost:
+  colsample_bytree: 0.8
+  gamma: 0.1
+  learning_rate: 0.05
+  max_depth: 6
+  min_child_weight: 3
+  n_estimators: 300
+  random_state: 42
+  reg_alpha: 0.1
+  reg_lambda: 1.0
+  scale_pos_weight: 1.0
+  subsample: 0.8
+  use_gpu: false

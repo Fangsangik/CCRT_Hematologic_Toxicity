@@ -1,0 +1,115 @@
+2026-03-06 15:29:42 | INFO     | src.utils.helpers | 시드 고정: 42
+2026-03-06 15:29:42 | INFO     | __main__ | ============================================================
+2026-03-06 15:29:42 | INFO     | __main__ | 학습 데이터로 모델 훈련
+2026-03-06 15:29:42 | INFO     | __main__ | ============================================================
+2026-03-06 15:29:42 | INFO     | src.data.data_loader | 데이터 로드 완료: /Users/hwangsang-ik/Desktop/ccrt_hematologic_toxicity/data/processed/emr_processed.csv (200행 x 113열)
+2026-03-06 15:29:42 | INFO     | src.data.data_loader | 결측치 처리 완료 (전략: median)
+2026-03-06 15:29:42 | INFO     | src.data.data_loader | 데이터 분할 완료: 학습=130, 검증=30, 테스트=40
+2026-03-06 15:29:42 | INFO     | src.data.data_loader |   학습 양성 비율: 0.400
+2026-03-06 15:29:42 | INFO     | src.data.data_loader |   검증 양성 비율: 0.400
+2026-03-06 15:29:42 | INFO     | src.data.data_loader |   테스트 양성 비율: 0.400
+2026-03-06 15:29:42 | INFO     | src.data.feature_engineer | 시계열 파생 변수 52개 생성 완료
+2026-03-06 15:29:42 | INFO     | src.data.feature_engineer | 시계열 파생 변수 52개 생성 완료
+2026-03-06 15:29:42 | INFO     | src.data.feature_engineer | 범주형 인코딩 완료: 6개 변수 (onehot)
+2026-03-06 15:29:42 | INFO     | src.data.feature_engineer | 범주형 인코딩 완료: 6개 변수 (onehot)
+2026-03-06 15:29:42 | INFO     | src.data.feature_engineer | 특성 선택 (baseline_cbc): baseline=23, cbc_raw=18, cbc_derived=52, 전체=93
+2026-03-06 15:29:42 | INFO     | __main__ |   학습 중: xgboost
+2026-03-06 15:29:42 | INFO     | src.models.baseline_models | XGBoost 학습 완료 - Val AUC: 1.0000
+2026-03-06 15:29:42 | INFO     | __main__ |   학습 중: lightgbm
+2026-03-06 15:29:42 | INFO     | src.models.baseline_models | LightGBM 학습 완료 - Val AUC: 1.0000
+2026-03-06 15:29:42 | INFO     | __main__ |   학습 중: logistic_regression
+2026-03-06 15:29:43 | INFO     | src.models.baseline_models | Logistic Regression 학습 완료 - Val AUC: 1.0000
+2026-03-06 15:29:43 | INFO     | __main__ |   학습 중: lstm
+2026-03-06 15:29:43 | INFO     | src.data.feature_engineer | LSTM 시퀀스 생성: shape=(130, 3, 6) (환자=130, 시점=3, 변수=6)
+2026-03-06 15:29:43 | INFO     | src.data.feature_engineer | LSTM 시퀀스 생성: shape=(30, 3, 6) (환자=30, 시점=3, 변수=6)
+2026-03-06 15:29:43 | INFO     | src.data.dataset | DataLoader 생성 완료: batch_size=32, train=130, val=30, test=30
+2026-03-06 15:29:43 | INFO     | src.models.trainer | 학습 장치: mps
+2026-03-06 15:29:43 | INFO     | src.models.trainer | 학습 시작: 100 에폭, 장치=mps
+2026-03-06 15:29:44 | INFO     | src.models.trainer | Epoch  10/100 | Train Loss: 0.2832 | Val Loss: 0.3623 | Train AUC: 0.9559 | Val AUC: 0.9259 | LR: 1.00e-03 | 0.0s
+2026-03-06 15:29:44 | INFO     | src.models.trainer | Epoch  20/100 | Train Loss: 0.0264 | Val Loss: 0.1208 | Train AUC: 1.0000 | Val AUC: 1.0000 | LR: 1.00e-03 | 0.0s
+2026-03-06 15:29:44 | INFO     | src.models.trainer | Epoch  30/100 | Train Loss: 0.0196 | Val Loss: 0.1019 | Train AUC: 1.0000 | Val AUC: 1.0000 | LR: 1.00e-03 | 0.0s
+2026-03-06 15:29:45 | INFO     | src.models.trainer | Epoch  40/100 | Train Loss: 0.0124 | Val Loss: 0.0684 | Train AUC: 1.0000 | Val AUC: 1.0000 | LR: 1.00e-03 | 0.0s
+2026-03-06 15:29:45 | INFO     | src.models.trainer | Epoch  50/100 | Train Loss: 0.0038 | Val Loss: 0.0632 | Train AUC: 1.0000 | Val AUC: 1.0000 | LR: 5.00e-04 | 0.0s
+2026-03-06 15:29:45 | INFO     | src.models.trainer | Early stopping 발동 (patience=15, best_loss=0.0393)
+2026-03-06 15:29:45 | INFO     | src.models.trainer | Early stopping at epoch 52
+2026-03-06 15:29:45 | INFO     | __main__ | ============================================================
+2026-03-06 15:29:45 | INFO     | __main__ | External Validation 데이터 생성
+2026-03-06 15:29:45 | INFO     | __main__ |   환자 수: 150명
+2026-03-06 15:29:45 | INFO     | __main__ |   시드: 9999 (학습 시드=42와 완전 독립)
+2026-03-06 15:29:45 | INFO     | __main__ | ============================================================
+2026-03-06 15:29:45 | INFO     | generate_emr_data | 독성 발생률: 62/150 (41.3%)
+2026-03-06 15:29:45 | INFO     | __main__ | 생성 완료:
+2026-03-06 15:29:45 | INFO     | __main__ |   환자: 150명
+2026-03-06 15:29:45 | INFO     | __main__ |   CBC 검사: 1017건
+2026-03-06 15:29:45 | INFO     | __main__ |   예상 독성 발생: 62명 (41.3%)
+2026-03-06 15:29:45 | INFO     | __main__ |   나이: 63.5 ± 7.9세
+2026-03-06 15:29:45 | INFO     | __main__ |   성별: 남 109명, 여 41명
+2026-03-06 15:29:45 | INFO     | __main__ |   레지멘: {np.str_('EP'): 61, np.str_('TP'): 35, np.str_('weekly_paclitaxel'): 26, np.str_('GP'): 19, np.str_('DP'): 9}
+2026-03-06 15:29:45 | INFO     | __main__ | ============================================================
+2026-03-06 15:29:45 | INFO     | __main__ | External 데이터 전처리
+2026-03-06 15:29:45 | INFO     | __main__ | ============================================================
+2026-03-06 15:29:45 | INFO     | src.data.preprocessing | ============================================================
+2026-03-06 15:29:45 | INFO     | src.data.preprocessing | EMR 전처리 파이프라인 시작
+2026-03-06 15:29:45 | INFO     | src.data.preprocessing | ============================================================
+2026-03-06 15:29:45 | INFO     | src.data.preprocessing | 1단계: 치료 시작일 매핑
+2026-03-06 15:29:45 | INFO     | src.data.preprocessing | 2단계: 검사 날짜 → Week 변환
+2026-03-06 15:29:45 | INFO     | src.data.preprocessing | Week 할당 완료: Week 0=85건, Week 1=215건, Week 2=150건, Week 3=131건, Week 4=125건, Week 5=112건, Week 6=105건, Week 7=94건
+2026-03-06 15:29:45 | INFO     | src.data.preprocessing | 3단계: Long → Wide 형식 변환
+2026-03-06 15:29:45 | INFO     | src.data.preprocessing | Week 0 CBC 결측 환자: 43.3%
+2026-03-06 15:29:45 | INFO     | src.data.preprocessing | Week 1 CBC 결측 환자: 0.0%
+2026-03-06 15:29:45 | INFO     | src.data.preprocessing | Week 2 CBC 결측 환자: 0.0%
+2026-03-06 15:29:45 | INFO     | src.data.preprocessing | Week 3 CBC 결측 환자: 12.7%
+2026-03-06 15:29:45 | INFO     | src.data.preprocessing | Week 4 CBC 결측 환자: 16.7%
+2026-03-06 15:29:45 | INFO     | src.data.preprocessing | Week 5 CBC 결측 환자: 25.3%
+2026-03-06 15:29:45 | INFO     | src.data.preprocessing | Week 6 CBC 결측 환자: 30.0%
+2026-03-06 15:29:45 | INFO     | src.data.preprocessing | Week 7 CBC 결측 환자: 37.3%
+2026-03-06 15:29:45 | INFO     | src.data.preprocessing | Wide 변환 완료: 150명, 48개 컬럼
+2026-03-06 15:29:45 | INFO     | src.data.preprocessing | 4단계: 결측 Week 보간
+2026-03-06 15:29:46 | INFO     | src.data.preprocessing | 보간 완료 (방법: linear), 잔여 결측: 390건
+2026-03-06 15:29:46 | INFO     | src.data.preprocessing | 5단계: CTCAE Grade 계산
+2026-03-06 15:29:46 | INFO     | src.data.preprocessing | [neutropenia] Grade 분포: {0: 79, 1: 7, 2: 5, 3: 29, 4: 30}, Grade 3+ 발생률: 39.3%
+2026-03-06 15:29:46 | INFO     | src.data.preprocessing | [anemia] Grade 분포: {0: 52, 1: 92, 2: 6}, Grade 3+ 발생률: 0.0%
+2026-03-06 15:29:46 | INFO     | src.data.preprocessing | [thrombocytopenia] Grade 분포: {0: 74, 1: 28, 2: 13, 3: 30, 4: 5}, Grade 3+ 발생률: 23.3%
+2026-03-06 15:29:46 | INFO     | src.data.preprocessing | [leukopenia] Grade 분포: {0: 69, 1: 16, 2: 6, 3: 7, 4: 52}, Grade 3+ 발생률: 39.3%
+2026-03-06 15:29:46 | INFO     | src.data.preprocessing | [lymphopenia] Grade 분포: {0: 54, 1: 22, 2: 23, 3: 40, 4: 11}, Grade 3+ 발생률: 34.0%
+2026-03-06 15:29:46 | INFO     | src.data.preprocessing | 6단계: 환자 정보 병합
+2026-03-06 15:29:46 | INFO     | src.data.preprocessing | 전처리 완료: 150명, 113개 변수
+2026-03-06 15:29:46 | INFO     | src.data.preprocessing | ============================================================
+2026-03-06 15:29:46 | INFO     | __main__ | 전처리 완료: /Users/hwangsang-ik/Desktop/ccrt_hematologic_toxicity/data/processed/external_validation.csv (150명, 113변수)
+2026-03-06 15:29:46 | INFO     | __main__ | ============================================================
+2026-03-06 15:29:46 | INFO     | __main__ | External Validation 성능 평가
+2026-03-06 15:29:46 | INFO     | __main__ | ============================================================
+2026-03-06 15:29:46 | INFO     | src.data.feature_engineer | 시계열 파생 변수 52개 생성 완료
+2026-03-06 15:29:46 | INFO     | src.data.feature_engineer | 범주형 인코딩 완료: 6개 변수 (onehot)
+2026-03-06 15:29:46 | INFO     | __main__ | External 데이터: 150명
+2026-03-06 15:29:46 | INFO     | __main__ |   양성 (Grade 3+): 59 (39.3%)
+2026-03-06 15:29:46 | INFO     | __main__ |   음성 (Grade <3): 91 (60.7%)
+2026-03-06 15:29:46 | INFO     | src.evaluation.metrics | [xgboost_external] AUROC=0.9886, AUPRC=0.9746, Sens=0.4407, Spec=0.9890, Optimal Threshold=0.196
+2026-03-06 15:29:46 | INFO     | src.evaluation.metrics | Bootstrap CI (95%): 0.9886 [0.9690 - 1.0000]
+2026-03-06 15:29:46 | INFO     | __main__ |   xgboost                   | AUROC=0.9886 (0.9690-1.0000) | Sens=0.4407 | Spec=0.9890
+2026-03-06 15:29:46 | INFO     | src.evaluation.metrics | [lightgbm_external] AUROC=0.9866, AUPRC=0.9698, Sens=0.4407, Spec=0.9890, Optimal Threshold=0.008
+2026-03-06 15:29:46 | INFO     | src.evaluation.metrics | Bootstrap CI (95%): 0.9866 [0.9631 - 1.0000]
+2026-03-06 15:29:46 | INFO     | __main__ |   lightgbm                  | AUROC=0.9866 (0.9631-1.0000) | Sens=0.4407 | Spec=0.9890
+2026-03-06 15:29:46 | INFO     | src.evaluation.metrics | [logistic_regression_external] AUROC=0.5912, AUPRC=0.6560, Sens=0.4407, Spec=0.9890, Optimal Threshold=0.992
+2026-03-06 15:29:47 | INFO     | src.evaluation.metrics | Bootstrap CI (95%): 0.5912 [0.4862 - 0.6924]
+2026-03-06 15:29:47 | INFO     | __main__ |   logistic_regression       | AUROC=0.5912 (0.4862-0.6924) | Sens=0.4407 | Spec=0.9890
+2026-03-06 15:29:47 | INFO     | src.data.feature_engineer | LSTM 시퀀스 생성: shape=(150, 3, 6) (환자=150, 시점=3, 변수=6)
+2026-03-06 15:29:47 | INFO     | src.evaluation.metrics | [lstm_external] AUROC=0.8748, AUPRC=0.7763, Sens=0.4237, Spec=0.9780, Optimal Threshold=0.296
+2026-03-06 15:29:47 | INFO     | src.evaluation.metrics | Bootstrap CI (95%): 0.8748 [0.8262 - 0.9161]
+2026-03-06 15:29:47 | INFO     | __main__ |   lstm                      | AUROC=0.8748 (0.8262-0.9161) | Sens=0.4237 | Spec=0.9780
+2026-03-06 15:29:47 | INFO     | __main__ | 
+============================================================
+2026-03-06 15:29:47 | INFO     | __main__ | External Validation 결과 요약
+2026-03-06 15:29:47 | INFO     | __main__ | ============================================================
+2026-03-06 15:29:47 | INFO     | __main__ | 모델                             |    AUROC |    AUPRC |   Sens |   Spec |    PPV |    NPV
+2026-03-06 15:29:47 | INFO     | __main__ | ------------------------------------------------------------------------------------------
+2026-03-06 15:29:47 | INFO     | __main__ | lightgbm_external              |   0.9866 |   0.9698 | 0.4407 | 0.9890 | 0.9630 | 0.7317
+2026-03-06 15:29:47 | INFO     | __main__ | logistic_regression_external   |   0.5912 |   0.6560 | 0.4407 | 0.9890 | 0.9630 | 0.7317
+2026-03-06 15:29:47 | INFO     | __main__ | lstm_external                  |   0.8748 |   0.7763 | 0.4237 | 0.9780 | 0.9259 | 0.7236
+2026-03-06 15:29:47 | INFO     | __main__ | xgboost_external               |   0.9886 |   0.9746 | 0.4407 | 0.9890 | 0.9630 | 0.7317
+2026-03-06 15:29:47 | INFO     | src.evaluation.visualization | ROC 곡선 저장: /Users/hwangsang-ik/Desktop/ccrt_hematologic_toxicity/outputs/figures/roc_external_validation.png
+2026-03-06 15:29:47 | INFO     | src.utils.helpers | 결과 저장: /Users/hwangsang-ik/Desktop/ccrt_hematologic_toxicity/outputs/logs/external_validation_results.json
+2026-03-06 15:29:47 | INFO     | __main__ | 
+============================================================
+2026-03-06 15:29:47 | INFO     | __main__ | External Validation 완료!
+2026-03-06 15:29:47 | INFO     | __main__ | ============================================================

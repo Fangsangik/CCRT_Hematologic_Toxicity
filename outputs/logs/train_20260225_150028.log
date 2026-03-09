@@ -1,0 +1,100 @@
+2026-02-25 15:00:28 | INFO     | __main__ | 데모 모드: 합성 데이터로 전체 파이프라인을 실행합니다
+2026-02-25 15:00:28 | INFO     | src.utils.helpers | 시드 고정: 42
+2026-02-25 15:00:28 | INFO     | __main__ | ============================================================
+2026-02-25 15:00:28 | INFO     | __main__ | 1단계: 데이터 로드
+2026-02-25 15:00:28 | INFO     | __main__ | ============================================================
+2026-02-25 15:00:28 | INFO     | __main__ | 합성 데이터를 생성합니다 (demo 모드)
+2026-02-25 15:00:28 | INFO     | src.data.data_loader | 합성 데이터 생성 완료: 300명, neutropenia 양성률=25.00%
+2026-02-25 15:00:28 | INFO     | src.utils.helpers | ============================================================
+2026-02-25 15:00:28 | INFO     | src.utils.helpers | 데이터셋 요약
+2026-02-25 15:00:28 | INFO     | src.utils.helpers | ============================================================
+2026-02-25 15:00:28 | INFO     | src.utils.helpers | 총 환자 수: 300
+2026-02-25 15:00:28 | INFO     | src.utils.helpers | 변수 수: 36
+2026-02-25 15:00:28 | INFO     | src.utils.helpers | 결측치: 38
+2026-02-25 15:00:28 | INFO     | src.utils.helpers | 양성 (Grade 3+): 75 (25.0%)
+2026-02-25 15:00:28 | INFO     | src.utils.helpers | 음성 (Grade <3): 225 (75.0%)
+2026-02-25 15:00:28 | INFO     | src.utils.helpers | ============================================================
+2026-02-25 15:00:28 | INFO     | __main__ | ============================================================
+2026-02-25 15:00:28 | INFO     | __main__ | 2단계: 결측치 처리
+2026-02-25 15:00:28 | INFO     | __main__ | ============================================================
+2026-02-25 15:00:28 | INFO     | src.data.data_loader | 결측치가 있는 컬럼 수: 3
+2026-02-25 15:00:28 | INFO     | src.data.data_loader | 결측치 처리 완료 (전략: median)
+2026-02-25 15:00:28 | INFO     | __main__ | ============================================================
+2026-02-25 15:00:28 | INFO     | __main__ | 3단계: 데이터 분할 (학습/검증/테스트)
+2026-02-25 15:00:28 | INFO     | __main__ | ============================================================
+2026-02-25 15:00:28 | INFO     | src.data.data_loader | 데이터 분할 완료: 학습=195, 검증=45, 테스트=60
+2026-02-25 15:00:28 | INFO     | src.data.data_loader |   학습 양성 비율: 0.251
+2026-02-25 15:00:28 | INFO     | src.data.data_loader |   검증 양성 비율: 0.244
+2026-02-25 15:00:28 | INFO     | src.data.data_loader |   테스트 양성 비율: 0.250
+2026-02-25 15:00:28 | INFO     | __main__ | ============================================================
+2026-02-25 15:00:28 | INFO     | __main__ | 4단계: 특성 공학 (CBC 시계열 파생 변수 생성)
+2026-02-25 15:00:28 | INFO     | __main__ | ============================================================
+2026-02-25 15:00:28 | INFO     | src.data.feature_engineer | 시계열 파생 변수 52개 생성 완료
+2026-02-25 15:00:28 | INFO     | src.data.feature_engineer | 시계열 파생 변수 52개 생성 완료
+2026-02-25 15:00:28 | INFO     | src.data.feature_engineer | 시계열 파생 변수 52개 생성 완료
+2026-02-25 15:00:28 | INFO     | src.data.feature_engineer | 범주형 인코딩 완료: 6개 변수 (onehot)
+2026-02-25 15:00:28 | INFO     | src.data.feature_engineer | 범주형 인코딩 완료: 6개 변수 (onehot)
+2026-02-25 15:00:28 | INFO     | src.data.feature_engineer | 범주형 인코딩 완료: 6개 변수 (onehot)
+2026-02-25 15:00:28 | INFO     | __main__ | ============================================================
+2026-02-25 15:00:28 | INFO     | __main__ | 5단계: CBC 시계열 탐색적 분석
+2026-02-25 15:00:28 | INFO     | __main__ | ============================================================
+2026-02-25 15:00:28 | INFO     | src.evaluation.visualization | CBC 시계열 그래프 저장: /Users/hwangsang-ik/Desktop/ccrt_hematologic_toxicity/outputs/figures/cbc_timeseries_AMC.png
+2026-02-25 15:00:28 | INFO     | src.evaluation.visualization | CBC 시계열 그래프 저장: /Users/hwangsang-ik/Desktop/ccrt_hematologic_toxicity/outputs/figures/cbc_timeseries_ANC.png
+2026-02-25 15:00:28 | INFO     | src.evaluation.visualization | CBC 시계열 그래프 저장: /Users/hwangsang-ik/Desktop/ccrt_hematologic_toxicity/outputs/figures/cbc_timeseries_WBC.png
+2026-02-25 15:00:28 | INFO     | __main__ | ============================================================
+2026-02-25 15:00:28 | INFO     | __main__ | 6단계: 모델 학습 [baseline_only]
+2026-02-25 15:00:28 | INFO     | __main__ | ============================================================
+2026-02-25 15:00:28 | INFO     | src.data.feature_engineer | 특성 선택 (baseline_only): baseline=22, cbc_raw=18, cbc_derived=52, 전체=22
+2026-02-25 15:00:28 | INFO     | __main__ | 
+--- xgboost (baseline_only) ---
+2026-02-25 15:00:28 | ERROR    | __main__ | xgboost 학습 실패: No module named 'xgboost'
+2026-02-25 15:00:28 | INFO     | __main__ | 
+--- lightgbm (baseline_only) ---
+2026-02-25 15:00:28 | ERROR    | __main__ | lightgbm 학습 실패: No module named 'lightgbm'
+2026-02-25 15:00:28 | INFO     | __main__ | 
+--- logistic_regression (baseline_only) ---
+2026-02-25 15:00:28 | INFO     | src.models.baseline_models | Logistic Regression 학습 완료 - Val AUC: 0.6631
+2026-02-25 15:00:28 | INFO     | src.evaluation.metrics | [logistic_regression_baseline_only] AUROC=0.5007, AUPRC=0.2626, Sens=0.4667, Spec=0.5556, Optimal Threshold=0.232
+2026-02-25 15:00:28 | INFO     | src.evaluation.metrics | Bootstrap CI (95%): 0.5007 [0.3346 - 0.6569]
+2026-02-25 15:00:28 | INFO     | src.models.baseline_models | 모델 저장: /Users/hwangsang-ik/Desktop/ccrt_hematologic_toxicity/outputs/models/logistic_regression_baseline_only.pkl
+2026-02-25 15:00:28 | INFO     | __main__ | ============================================================
+2026-02-25 15:00:28 | INFO     | __main__ | 6단계: 모델 학습 [baseline_cbc]
+2026-02-25 15:00:28 | INFO     | __main__ | ============================================================
+2026-02-25 15:00:28 | INFO     | src.data.feature_engineer | 특성 선택 (baseline_cbc): baseline=22, cbc_raw=18, cbc_derived=52, 전체=92
+2026-02-25 15:00:28 | INFO     | __main__ | 
+--- xgboost (baseline_cbc) ---
+2026-02-25 15:00:28 | ERROR    | __main__ | xgboost 학습 실패: No module named 'xgboost'
+2026-02-25 15:00:28 | INFO     | __main__ | 
+--- lightgbm (baseline_cbc) ---
+2026-02-25 15:00:28 | ERROR    | __main__ | lightgbm 학습 실패: No module named 'lightgbm'
+2026-02-25 15:00:28 | INFO     | __main__ | 
+--- logistic_regression (baseline_cbc) ---
+2026-02-25 15:00:29 | INFO     | src.models.baseline_models | Logistic Regression 학습 완료 - Val AUC: 0.9679
+2026-02-25 15:00:29 | INFO     | src.evaluation.metrics | [logistic_regression_baseline_cbc] AUROC=0.9630, AUPRC=0.8961, Sens=0.7333, Spec=0.9556, Optimal Threshold=0.034
+2026-02-25 15:00:29 | INFO     | src.evaluation.metrics | Bootstrap CI (95%): 0.9630 [0.9133 - 0.9960]
+2026-02-25 15:00:29 | INFO     | src.models.baseline_models | 모델 저장: /Users/hwangsang-ik/Desktop/ccrt_hematologic_toxicity/outputs/models/logistic_regression_baseline_cbc.pkl
+2026-02-25 15:00:29 | INFO     | __main__ | ============================================================
+2026-02-25 15:00:29 | INFO     | __main__ | 7단계: 모델 비교 및 결과 저장
+2026-02-25 15:00:29 | INFO     | __main__ | ============================================================
+2026-02-25 15:00:29 | INFO     | src.evaluation.metrics | 
+========================================================================================================================
+모델 성능 비교
+========================================================================================================================
+2026-02-25 15:00:29 | INFO     | src.evaluation.metrics | 모델                       auroc          auprc          sensitivity    specificity    ppv            npv            f1_score       brier_score    
+2026-02-25 15:00:29 | INFO     | src.evaluation.metrics | ------------------------------------------------------------------------------------------------------------------------
+2026-02-25 15:00:29 | INFO     | src.evaluation.metrics | logistic_regression_baseline_only0.5007         0.2626         0.4667         0.5556         0.2593         0.7576         0.3333         0.2694         
+2026-02-25 15:00:29 | INFO     | src.evaluation.metrics | logistic_regression_baseline_cbc0.9630         0.8961         0.7333         0.9556         0.8462         0.9149         0.7857         0.0766         
+2026-02-25 15:00:29 | INFO     | src.evaluation.visualization | ROC 곡선 저장: /Users/hwangsang-ik/Desktop/ccrt_hematologic_toxicity/outputs/figures/roc_comparison.png
+2026-02-25 15:00:29 | INFO     | src.evaluation.visualization | 모델 비교 그래프 저장: /Users/hwangsang-ik/Desktop/ccrt_hematologic_toxicity/outputs/figures/model_comparison.png
+2026-02-25 15:00:29 | INFO     | src.evaluation.metrics | 
+=== Incremental Value (CBC 시계열 추가 효과) ===
+AUROC: 0.5007 → 0.9630 (Δ=+0.4622, +92.3%)
+Sensitivity: 0.4667 → 0.7333 (Δ=+0.2667)
+2026-02-25 15:00:29 | INFO     | __main__ | 
+최적 모델: logistic_regression_baseline_cbc (AUROC=0.9630)
+2026-02-25 15:00:29 | INFO     | src.utils.helpers | 결과 저장: /Users/hwangsang-ik/Desktop/ccrt_hematologic_toxicity/outputs/logs/experiment_results.json
+2026-02-25 15:00:29 | INFO     | __main__ | ============================================================
+2026-02-25 15:00:29 | INFO     | __main__ | 파이프라인 완료!
+2026-02-25 15:00:29 | INFO     | __main__ | 결과 저장 위치: /Users/hwangsang-ik/Desktop/ccrt_hematologic_toxicity/outputs/logs
+2026-02-25 15:00:29 | INFO     | __main__ | 시각화 저장 위치: /Users/hwangsang-ik/Desktop/ccrt_hematologic_toxicity/outputs/figures
+2026-02-25 15:00:29 | INFO     | __main__ | ============================================================
