@@ -1,0 +1,34 @@
+# Korean -> English column mapping
+# Used by ExcelRepository to map Korean Excel headers to English column names.
+
+baseline:
+  환자번호: patient_id
+  환자ID: patient_id
+  나이: age
+  연령: age
+  성별: sex
+  체질량지수: bmi
+  BMI: bmi
+  ECOG: ecog_ps
+  병기: stage
+  T병기: t_stage
+  N병기: n_stage
+  크레아티닌: creatinine
+  알부민: albumin
+  총방사선량: rt_total_dose
+  분할선량: rt_fraction_dose
+  항암제: chemo_regimen
+  항암제용량: chemo_dose
+  항암주기: chemo_cycles
+  Grade3호중구감소증: grade3_neutropenia
+  grade3_호중구감소증: grade3_neutropenia
+
+# CBC Korean -> English (auto-generated per week)
+# e.g. "백혈구_0주" -> "WBC_week0", "호중구_1주" -> "ANC_week1"
+cbc:
+  백혈구: WBC
+  호중구: ANC
+  림프구: ALC
+  단핵구: AMC
+  혈소판: PLT
+  헤모글로빈: Hb

@@ -1,0 +1,50 @@
+# CCRT 혈액독성 예측 - 데이터 스키마
+cbc_features:
+  - WBC
+  - ANC
+  - ALC
+  - AMC
+  - PLT
+  - Hb
+
+cbc_input_timepoints: [0, 1, 2]
+
+baseline_clinical_features:
+  - age
+  - sex
+  - bmi
+  - ecog_ps
+  - stage
+  - t_stage
+  - n_stage
+  - creatinine
+  - albumin
+
+treatment_features:
+  - rt_total_dose
+  - chemo_regimen
+  - chemo_cycles
+
+categorical_features:
+  - sex
+  - ecog_ps
+  - stage
+  - t_stage
+  - n_stage
+  - chemo_regimen
+
+target:
+  primary: grade3_neutropenia
+  all:
+    - grade3_neutropenia
+    - grade3_anemia
+    - grade3_thrombocytopenia
+
+data_split:
+  test_size: 0.2
+  val_size: 0.15
+  random_state: 42
+
+missing:
+  strategy: median
+  max_missing_rate: 0.3

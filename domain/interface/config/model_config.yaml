@@ -1,0 +1,41 @@
+# CCRT 혈액독성 예측 - 모델 하이퍼파라미터
+
+training:
+  n_folds: 5
+  seed: 42
+  experiment_modes:
+    - baseline_only
+    - baseline_cbc
+
+xgboost:
+  n_estimators: 300
+  max_depth: 6
+  learning_rate: 0.05
+  subsample: 0.8
+  colsample_bytree: 0.8
+  min_child_weight: 3
+  gamma: 0.1
+  reg_alpha: 0.1
+  reg_lambda: 1.0
+
+lightgbm:
+  n_estimators: 300
+  max_depth: 6
+  learning_rate: 0.05
+  num_leaves: 31
+  subsample: 0.8
+  colsample_bytree: 0.8
+  min_child_samples: 20
+  reg_alpha: 0.1
+  reg_lambda: 1.0
+
+logistic_regression:
+  C: 1.0
+  penalty: l2
+  solver: lbfgs
+  max_iter: 1000
+  class_weight: balanced
+
+screening:
+  min_sensitivity: 0.85
+  min_specificity: 0.30

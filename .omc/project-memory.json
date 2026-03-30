@@ -1,0 +1,140 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1774847663631,
+  "projectRoot": "/Users/hwangsang-ik/PycharmProjects/PythonProject/CCRT module ",
+  "techStack": {
+    "languages": [],
+    "frameworks": [],
+    "packageManager": null,
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": null,
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": null,
+    "scripts": {}
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [],
+    "gitBranches": null
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "domain": {
+      "path": "domain",
+      "purpose": null,
+      "fileCount": 1,
+      "lastAccessed": 1774847663621,
+      "keyFiles": [
+        "__init__.py"
+      ]
+    },
+    "domain/utils": {
+      "path": "domain/utils",
+      "purpose": "Utility functions",
+      "fileCount": 2,
+      "lastAccessed": 1774847663621,
+      "keyFiles": [
+        "__init__.py",
+        "label.py"
+      ]
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "./domain/screening/domain/anc_value.py",
+      "accessCount": 4,
+      "lastAccessed": 1774847976770,
+      "type": "file"
+    },
+    {
+      "path": "./domain/utils/repository/emr_repository.py",
+      "accessCount": 3,
+      "lastAccessed": 1774847954243,
+      "type": "file"
+    },
+    {
+      "path": "./domain/utils/label.py",
+      "accessCount": 2,
+      "lastAccessed": 1774847987038,
+      "type": "file"
+    },
+    {
+      "path": ".",
+      "accessCount": 1,
+      "lastAccessed": 1774847729334,
+      "type": "directory"
+    },
+    {
+      "path": "domain/interface/cli/evaluate.py",
+      "accessCount": 1,
+      "lastAccessed": 1774848429213,
+      "type": "file"
+    },
+    {
+      "path": "domain/interface/cli/run_mimic.py",
+      "accessCount": 1,
+      "lastAccessed": 1774848429239,
+      "type": "file"
+    },
+    {
+      "path": "domain/interface/cli/preprocess.py",
+      "accessCount": 1,
+      "lastAccessed": 1774848429242,
+      "type": "file"
+    },
+    {
+      "path": "domain/interface/cli/run_real.py",
+      "accessCount": 1,
+      "lastAccessed": 1774848429494,
+      "type": "file"
+    },
+    {
+      "path": "domain/interface/cli/run_all.py",
+      "accessCount": 1,
+      "lastAccessed": 1774848429532,
+      "type": "file"
+    },
+    {
+      "path": "domain/interface/cli/run_emr.py",
+      "accessCount": 1,
+      "lastAccessed": 1774848434646,
+      "type": "file"
+    },
+    {
+      "path": "domain/prediction/application/train_prediciton.py",
+      "accessCount": 1,
+      "lastAccessed": 1774848454238,
+      "type": "file"
+    },
+    {
+      "path": "domain/prediction/application/shap.py",
+      "accessCount": 1,
+      "lastAccessed": 1774848454240,
+      "type": "file"
+    },
+    {
+      "path": "domain/prediction/application/evaluate_prediction.py",
+      "accessCount": 1,
+      "lastAccessed": 1774848454244,
+      "type": "file"
+    },
+    {
+      "path": "domain/prediction/domain/label_service.py",
+      "accessCount": 1,
+      "lastAccessed": 1774848455207,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}
+}
